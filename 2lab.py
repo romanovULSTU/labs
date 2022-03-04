@@ -1,4 +1,4 @@
-data = open ("input.txt")
+data = open ("input_for_2lab.txt")
 n_list = list(data)
 for n in n_list:
     n = int(n)
