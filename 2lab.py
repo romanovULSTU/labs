@@ -18,20 +18,20 @@ try:
         line = file.read(buffer_len)          
         if not line:                        # если файл пустой
             print ("\nФайл input.txt в директории проекта пустой.\nДобавьте не пустой файл в директорию или переименуйте существующий *.txt файл.")
-        for line in file:                   # пока есть строки в файле    
+        for line in file:                   # пока есть строки   
             if line:   
                 work_buffer += '*'
                 if len(work_buffer) >= max_buffer_len :    # Если буфер переполнен
                     print ("\nФайл input.txt содержит блок цифр, превышающий максимальный размер буфера = "+str(max_buffer_len) + " строк.\nОткорректируйте файл text.txt в директории или переименуйте существующий *.txt файл.")
                     more_max_buffer_len = True
                     if more_max_buffer_len:
-                        break
+                        break               #выход из цикла
                 else:
                     line = line.strip()[::-1]       #переворачиваем числа
-                    print(line)
+                    print(line)                     #выводим нужные числа
             
-        finish = time.time()
-        result = finish - start
+        finish = time.time()        
+        result = finish - start                 #время выполнения
         print("Program time: " + str(result) + " seconds.")
         
 except FileNotFoundError:
