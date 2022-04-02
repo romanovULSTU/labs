@@ -8,6 +8,7 @@ more_max_buffer_len = False
 max_buffer_len = 100    # максимальный размер рабочего буфера
 buffer_len = 1          # размер буфера чтения
 work_buffer = ""        # рабочий буфер
+number_flag = False
 
 
 try:
