@@ -32,6 +32,9 @@ try:
                     break
             if number_flag == True:
                 print(work_buffer.strip()[::-1],'\n')       # печатем число
+            if not number_flag and not buffer and len(work_buffer) >0:
+                print("\n Файл input.txt не содержит ни одной цифры.")
+                break
 
                 
             work_buffer = ""        #обновляем переменные
